@@ -1,4 +1,3 @@
-using System;
 using DeathrunManager.Shared;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -13,8 +12,8 @@ namespace ExampleModule;
 
 public sealed class ExampleModule(ISharedSystem sharedSystem, IDeathrunManager deathrunManagerApi) : IDeathrunModule
 {
-    public string Name => "Environment Modifier for Deathrun mode";
-    public string Author => "AquaVadis";
+    public string Name                                                 => "Environment Modifier for Deathrun mode";
+    public string Author                                               => "AquaVadis";
 
     public IDeathrunManager DeathrunManager { get; }                   = deathrunManagerApi;
     public required ServiceProvider ServiceProvider                    { get; set; }
