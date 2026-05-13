@@ -16,9 +16,9 @@ using Sharp.Shared.Managers;
 
 namespace ExampleModule.Services;
 
-internal sealed class LightningServices(
+internal sealed class ExampleService(
     IModSharp modSharp,
-    ILogger<LightningServices> logger,
+    ILogger<ExampleService> logger,
     IClientManager clientManager,
     IDeathrunManager deathrunManagerApi) : IService
 {

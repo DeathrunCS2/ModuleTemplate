@@ -35,7 +35,7 @@ public sealed class ExampleModule(ISharedSystem sharedSystem, IDeathrunManager d
         services.AddSingleton(sharedSystem.GetTransmitManager());
         services.AddSingleton(sharedSystem.GetLoggerFactory());
         
-        services.AddSingleton<IBaseInterface, IService, LightningServices>();
+        services.AddSingleton<IBaseInterface, IService, ExampleService>();
         
         services.TryAdd(ServiceDescriptor.Singleton(typeof(ILogger<>), typeof(Logger<>)));
         
