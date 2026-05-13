@@ -26,7 +26,7 @@ internal sealed class ExampleService(
 
     public bool Init()
     {
-        _config = LoadConfig();
+        //_config = LoadConfig();
         
         clientManager.InstallCommandCallback("test", OnCommand);
         
@@ -35,7 +35,7 @@ internal sealed class ExampleService(
         deathrunManagerApi.Managers.GameplayManager.DeathrunPlayerKilled += OnDeathrunPlayerKilled;
         deathrunManagerApi.Managers.GameplayManager.RoundEnded += OnDeathrunRoundEnded;
         
-        logger.LogInformation("Environment Modifier module initialized!");
+        logger.LogInformation("Example module initialized!");
         
         return true;
     }
@@ -49,7 +49,7 @@ internal sealed class ExampleService(
         deathrunManagerApi.Managers.GameplayManager.DeathrunPlayerKilled -= OnDeathrunPlayerKilled;
         deathrunManagerApi.Managers.GameplayManager.RoundEnded -= OnDeathrunRoundEnded;
         
-        logger.LogInformation("Shutdown Environment Modifier module!");
+        logger.LogInformation("Shutdown Example module!");
     }
     
     #region Listeners
