@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using ExampleModule.Models;
+﻿using ExampleModule.Models;
 
 namespace ExampleModule.Config;
 
