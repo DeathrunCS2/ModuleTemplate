@@ -19,7 +19,7 @@ public sealed class ExampleModule(ISharedSystem sharedSystem, IDeathrunManager d
     public IDeathrunManager DeathrunManager { get; }                   = deathrunManagerApi;
     public required ServiceProvider ServiceProvider                    { get; set; }
 
-    private ILogger<ExampleModule> Logger { get; set; }           = sharedSystem.GetLoggerFactory().CreateLogger<ExampleModule>();
+    private ILogger<ExampleModule> Logger { get; set; }                = sharedSystem.GetLoggerFactory().CreateLogger<ExampleModule>();
 
     public bool Init(bool hotReload)
     {
